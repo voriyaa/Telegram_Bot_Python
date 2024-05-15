@@ -1,9 +1,10 @@
 from Telegram_Bot_Python.message_config.message import StartMessage
 from ..keyboard.reply import reply_keyboard
+from ..utils.commands import set_commands
 import sqlite3
 
 
-async def get_start(message):
+async def get_start(message, bot):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
 
@@ -15,5 +16,5 @@ async def get_start(message):
         pass
 
     conn.close()
-
+    await set_commands(bot)
     await message.answer(StartMessage.WELCOME_MESSAGE, reply_markup=reply_keyboard)
