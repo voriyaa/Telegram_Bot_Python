@@ -16,7 +16,7 @@ async def change_mode_to_text(message):
 
     conn.commit()
     conn.close()
-    await message.answer('Спроси мне о чем угодно и я отвечу тебе', reply_markup=reply_keyboard)
+    await message.answer('Спроси мне о чем угодно и я отвечу тебе.', reply_markup=reply_keyboard)
 
 
 async def change_mode_to_image(message):
