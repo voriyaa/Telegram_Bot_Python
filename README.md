@@ -15,8 +15,10 @@
 Выполните команду для сборки Docker-образа, заменив `Gemini` на желаемое имя образа:
 
 ```bash
-docker build -t Gemini .
-docker run Gemini
+docker build -t gemini .
+```
+```bash
+docker run gemini
 ```
 
 
