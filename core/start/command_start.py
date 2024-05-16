@@ -1,4 +1,4 @@
-from Telegram_Bot_Python.message_config.message import StartMessage
+from message_config.message import StartMessage
 from ..keyboard.reply import reply_keyboard
 from ..utils.commands import set_commands
 import sqlite3
